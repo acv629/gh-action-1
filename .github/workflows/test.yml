@@ -14,8 +14,8 @@ jobs:
               with:
                 node-version: 18
             - name: Install dependencies
-              working-directory: "$WORKING_DIR"
+              working-directory: "${{env.WORKING_DIR}}"
               run: npm ci
             - name: Run tests
-              working-directory: "$WORKING_DIR"
+              working-directory: "${{env.WORKING_DIR}}"
               run: npm test           
